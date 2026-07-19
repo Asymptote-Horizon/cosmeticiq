@@ -10,11 +10,11 @@ import { useAppStore } from '@/lib/store';
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/skin-twin', label: 'Skin Twin' },
+  { href: '/interactions', label: 'Interactions' },
   { href: '/scan', label: 'Scan' },
   { href: '/analyze', label: 'Analyze' },
   { href: '/compare', label: 'Compare' },
   { href: '/fuzzy-logic', label: 'Fuzzy Logic' },
-  { href: '/claims', label: 'Claims' },
   { href: '/dashboard', label: 'Dashboard' },
 ];
 

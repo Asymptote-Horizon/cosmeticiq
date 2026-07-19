@@ -4,7 +4,7 @@ from contextlib import asynccontextmanager
 
 from app.core.config import settings
 from app.core.database import init_db
-from app.api.v1 import auth, products, recommendations, ingredients, claims, users, admin, brands, skin_analysis, skin_analysis
+from app.api.v1 import auth, products, recommendations, ingredients, claims, users, admin, brands, skin_analysis, interactions
 from app.middleware import RateLimitMiddleware
 
 
@@ -45,7 +45,7 @@ app.include_router(users.router, prefix="/api/v1")
 app.include_router(admin.router, prefix="/api/v1")
 app.include_router(brands.router, prefix="/api/v1")
 app.include_router(skin_analysis.router, prefix="/api/v1")
-app.include_router(skin_analysis.router, prefix="/api/v1")
+app.include_router(interactions.router, prefix="/api/v1")
 
 
 @app.get("/")
