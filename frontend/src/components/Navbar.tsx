@@ -9,6 +9,7 @@ import { useAppStore } from '@/lib/store';
 
 const navItems = [
   { href: '/', label: 'Home' },
+  { href: '/skin-twin', label: 'Skin Twin' },
   { href: '/scan', label: 'Scan' },
   { href: '/analyze', label: 'Analyze' },
   { href: '/compare', label: 'Compare' },
