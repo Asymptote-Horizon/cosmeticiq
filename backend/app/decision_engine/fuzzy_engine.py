@@ -1,6 +1,16 @@
-import numpy as np
-import skfuzzy as fuzz
-from skfuzzy import control as ctrl
+try:
+    import numpy as np
+except (ImportError, Exception):
+    np = None
+
+try:
+    import skfuzzy as fuzz
+    from skfuzzy import control as ctrl
+    SKFUZZY_AVAILABLE = True
+except (ImportError, Exception):
+    SKFUZZY_AVAILABLE = False
+    fuzz = None
+    ctrl = None
 from typing import Dict, List, Any, Tuple
 import json
 
@@ -572,4 +582,7 @@ class FuzzyCosmeticEngine:
 
 
 # Global engine instance
-fuzzy_engine = FuzzyCosmeticEngine()
+if SKFUZZY_AVAILABLE and np is not None:
+    fuzzy_engine = FuzzyCosmeticEngine()
+else:
+    fuzzy_engine = None
